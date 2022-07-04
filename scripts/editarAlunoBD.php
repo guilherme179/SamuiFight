@@ -69,10 +69,10 @@ if(!empty($dados['modalidade'])){
     }
 }
 
-if(!empty($dados['vencimeto'])){
-    $query_usuario = "UPDATE clientes SET vencimeto = :vencimeto WHERE id = :id";
+if(!empty($dados['vencimento'])){
+    $query_usuario = "UPDATE clientes SET vencimento = :vencimento WHERE id = :id";
     $edit_usuario = $conn->prepare($query_usuario);
-    $edit_usuario->bindParam(':vencimeto', $dados['vencimeto']);
+    $edit_usuario->bindParam(':vencimento', $dados['vencimento']);
     $edit_usuario->bindParam(':id', $dados['id']);
 
     if($edit_usuario->execute()){
